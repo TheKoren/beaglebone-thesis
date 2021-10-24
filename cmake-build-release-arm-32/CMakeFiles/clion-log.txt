@@ -1,0 +1,4 @@
+/snap/clion/169/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=/bin/arm-linux-gnueabihf-gcc -DCMAKE_CXX_COMPILER=/bin/arm-linux-gnueabihf-g++ -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/koren/CLionProjects/Beaglebone
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32

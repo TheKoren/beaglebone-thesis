@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Beaglebone"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Beaglebone">
+				<Option output="/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Beaglebone" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/koren/CLionProjects/Beaglebone/include"/>
+					<Add directory="/usr/lib/gcc-cross/arm-linux-gnueabihf/9/include"/>
+					<Add directory="/usr/lib/gcc-cross/arm-linux-gnueabihf/9/../../../../arm-linux-gnueabihf/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 Beaglebone"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Beaglebone/fast">
+				<Option output="/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Beaglebone" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/koren/CLionProjects/Beaglebone/include"/>
+					<Add directory="/usr/lib/gcc-cross/arm-linux-gnueabihf/9/include"/>
+					<Add directory="/usr/lib/gcc-cross/arm-linux-gnueabihf/9/../../../../arm-linux-gnueabihf/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 Beaglebone/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main_lib">
+				<Option output="/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/libmain_lib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/koren/CLionProjects/Beaglebone/include"/>
+					<Add directory="/usr/lib/gcc-cross/arm-linux-gnueabihf/9/include"/>
+					<Add directory="/usr/lib/gcc-cross/arm-linux-gnueabihf/9/../../../../arm-linux-gnueabihf/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 main_lib"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main_lib/fast">
+				<Option output="/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/libmain_lib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/koren/CLionProjects/Beaglebone/include"/>
+					<Add directory="/usr/lib/gcc-cross/arm-linux-gnueabihf/9/include"/>
+					<Add directory="/usr/lib/gcc-cross/arm-linux-gnueabihf/9/../../../../arm-linux-gnueabihf/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 main_lib/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/koren/CLionProjects/Beaglebone/src/blescan.c">
+			<Option target="Beaglebone"/>
+			<Option target="main_lib"/>
+		</Unit>
+		<Unit filename="/home/koren/CLionProjects/Beaglebone/src/cli.c">
+			<Option target="Beaglebone"/>
+			<Option target="main_lib"/>
+		</Unit>
+		<Unit filename="/home/koren/CLionProjects/Beaglebone/src/data.c">
+			<Option target="Beaglebone"/>
+			<Option target="main_lib"/>
+		</Unit>
+		<Unit filename="/home/koren/CLionProjects/Beaglebone/src/main.c">
+			<Option target="Beaglebone"/>
+			<Option target="main_lib"/>
+		</Unit>
+		<Unit filename="/home/koren/CLionProjects/Beaglebone/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

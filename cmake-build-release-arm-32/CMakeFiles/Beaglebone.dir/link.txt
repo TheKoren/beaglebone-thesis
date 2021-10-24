@@ -1,0 +1,1 @@
+/bin/arm-linux-gnueabihf-gcc -O3 -DNDEBUG CMakeFiles/Beaglebone.dir/src/main.c.o CMakeFiles/Beaglebone.dir/src/data.c.o CMakeFiles/Beaglebone.dir/src/cli.c.o CMakeFiles/Beaglebone.dir/src/blescan.c.o -o Beaglebone  -lgattlib 

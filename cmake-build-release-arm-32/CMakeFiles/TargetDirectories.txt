@@ -1,0 +1,4 @@
+/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/CMakeFiles/rebuild_cache.dir
+/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/CMakeFiles/edit_cache.dir
+/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/CMakeFiles/Beaglebone.dir
+/home/koren/CLionProjects/Beaglebone/cmake-build-release-arm-32/CMakeFiles/main_lib.dir
