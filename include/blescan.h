@@ -16,8 +16,8 @@
 #include "data.h"
 #include <time.h>
 
-#define CFG_NUM_OF_BLE_DEV 5u
 #define NUM_OF_UUIDS 11u
+#define NUM_OF_MAC 2u
 
 /*UUID Descriptors*/
 #define TVOC_UUID "efd658ae-c401-ef33-76e7-91b00019103b"
@@ -42,9 +42,14 @@
 
 #define SOUNDLVL_UUID "c8546913-bf02-45eb-8dde-9f8754f4a32e"
 
+/*-----------------*/
+
+/*MAC*/
+
+#define SL_TB_0 "14:B4:57:6D:A5:6D"
+#define SL_TB_1 "00:0B:57:64:8F:DD"
+
 typedef struct Config {
-    char * address[CFG_NUM_OF_BLE_DEV];
-    int num;
     uuid_t * uuids[NUM_OF_UUIDS];
 
 }Config;

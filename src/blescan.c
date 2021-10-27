@@ -24,23 +24,19 @@ char * uuids_str[NUM_OF_UUIDS] =
                 SOUNDLVL_UUID,
         };
 
+char * mac_str[NUM_OF_MAC] =
+        {
+            SL_TB_0,
+            SL_TB_1,
+        };
 
-
+/*Functions*/
 void ble_handler(void)
 {
     int i;
-
-    if(0 != config.num)
+    for(i = 0; i < NUM_OF_MAC; i++)
     {
-        if(!(get_address_from_config()))
-        {
-            printf("Failed to get address from config");
-            return;
-        }
-    }
-    for(i = 0; i < config.num; i++)
-    {
-        ble_connect_device(config.address[0]);
+        ble_connect_device(mac_str[i]);
     }
 }
 
@@ -51,7 +47,7 @@ void ble_connect_device(char * address)
     gattlib_primary_service_t* services;
     gattlib_characteristic_t* characteristics;
 
-    int ret, i;
+    int ret, i, j;
     int services_count, characteristics_count;
     char uuid_str[MAX_LEN_UUID_STR + 1];
 
@@ -104,10 +100,21 @@ void ble_connect_device(char * address)
     size_t len = sizeof(uint32_t);
     for(i = 0; i < NUM_OF_UUIDS; i++)
     {
-        gattlib_read_char_by_uuid(gatt_connection, config.uuids[i], (void**)&buffer, &len);
-        printf("%ls\n", buffer);
+        ret = gattlib_read_char_by_uuid(gatt_connection, config.uuids[i], (void**)&buffer, &len);
+        if(ret != GATTLIB_SUCCESS)
+        {
+            printf("UUID not found\n");
+        }
+        for(j; j < len; j++)
+        {
+            printf("%02x ", buffer[j]);
+        }
+        printf("\n");
     }
     // TODO: Handle buffer value.
     free(characteristics);
     gattlib_disconnect(gatt_connection);
+
+
 }
+
