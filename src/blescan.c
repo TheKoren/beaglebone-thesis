@@ -114,7 +114,5 @@ void ble_connect_device(char * address)
     // TODO: Handle buffer value.
     free(characteristics);
     gattlib_disconnect(gatt_connection);
-
-
 }
 
