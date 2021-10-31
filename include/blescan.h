@@ -16,7 +16,7 @@
 #include "data.h"
 #include <time.h>
 
-#define NUM_OF_UUIDS 11u
+#define NUM_OF_UUIDS 9u
 #define NUM_OF_MAC 2u
 
 /*UUID Descriptors*/
@@ -24,13 +24,13 @@
 
 #define ECO2_UUID "efd658ae-c402-ef33-76e7-91b00019103b"
 
-#define BATTLVL_UUID "00002a19-0000-1000-8000-00805f9b34fb"
+//#define BATTLVL_UUID "00002a19-0000-1000-8000-00805f9b34fb"
 
 #define HALLFIELDSTATE_UUID "f598dbc5-2f01-4ec5-9936-b3d1aa4f957f"
 
 #define HALLFIELDSTRENGTH_UUID "f598dbc5-2f02-4ec5-9936-b3d1aa4f957f"
 
-#define PRESSURE_UUID "00002902-0000-1000-8000-00805f9b34fb"
+//#define PRESSURE_UUID "00002902-0000-1000-8000-00805f9b34fb"
 
 #define UVINDEX_UUID "00002a76-0000-1000-8000-00805f9b34fb"
 
@@ -50,13 +50,21 @@
 #define SL_TB_1 "00:0B:57:64:8F:DD"
 
 typedef struct Config {
-    uuid_t * uuids[NUM_OF_UUIDS];
+    uuid_t  uuids[NUM_OF_UUIDS][MAX_LEN_UUID_STR + 1];
 
 }Config;
 
 extern Config config;
-
+void decoder_TVOC();
+void decoder_ECO2();
+void decoder_HALLFIELDSTATE();
+void decoder_HALLFIELDSTRENGTH();
+void decoder_UVINDEX();
+void decoder_AMBLIGHT();
+void decoder_TEMP();
+void decoder_HUM();
+void decoder_SOUND();
 void ble_handler(void);
-void ble_connect_device(char * addresss);
+void ble_connect_device(char * address);
 
 #endif //THESIS_BLESCAN_H

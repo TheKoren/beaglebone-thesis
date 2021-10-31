@@ -11,17 +11,17 @@ Config config;
 
 char * uuids_str[NUM_OF_UUIDS] =
         {
-                TVOC_UUID,
-                ECO2_UUID,
-                BATTLVL_UUID,
-                HALLFIELDSTATE_UUID,
-                HALLFIELDSTRENGTH_UUID,
-                PRESSURE_UUID,
-                UVINDEX_UUID,
-                AMBLIGHT_UUID,
-                TEMP_UUID,
-                HUM_UUID,
-                SOUNDLVL_UUID,
+            TVOC_UUID,
+            ECO2_UUID,
+            //BATTLVL_UUID,
+            HALLFIELDSTATE_UUID,
+            HALLFIELDSTRENGTH_UUID,
+            //PRESSURE_UUID,
+            UVINDEX_UUID,
+            AMBLIGHT_UUID,
+            TEMP_UUID,
+            HUM_UUID,
+            SOUNDLVL_UUID,
         };
 
 char * mac_str[NUM_OF_MAC] =
@@ -34,6 +34,19 @@ char * mac_str[NUM_OF_MAC] =
 void ble_handler(void)
 {
     int i;
+    int ret;
+    const char* adapter_name;
+    void* adapter;
+    ret = gattlib_adapter_open(adapter_name, &adapter);
+    for(i = 0; i < NUM_OF_UUIDS; i++)
+    {
+        gattlib_string_to_uuid(uuids_str[i],MAX_LEN_UUID_STR + 1,config.uuids[i]);
+    }
+    if(ret)
+    {
+        printf("Failed to open adapter.\n");
+        return;
+    }
     for(i = 0; i < NUM_OF_MAC; i++)
     {
         ble_connect_device(mac_str[i]);
@@ -42,7 +55,6 @@ void ble_handler(void)
 
 void ble_connect_device(char * address)
 {
-
     gatt_connection_t* gatt_connection; // TODO: Understand
     gattlib_primary_service_t* services;
     gattlib_characteristic_t* characteristics;
@@ -91,28 +103,95 @@ void ble_connect_device(char * address)
         printf("characteristic[%d] properties: %02x value_handle:%04x uuid: %s\n", i, characteristics[i].properties, characteristics[i].value_handle, uuid_str);
     }
 
-    for(i = 0; i < NUM_OF_UUIDS; i++)
-    {
-        gattlib_string_to_uuid(uuids_str[i],strlen(uuids_str[i]) + 1,config.uuids[i]);
-    }
+    uint8_t *buffer = NULL;
+    size_t len;
 
-    uint32_t *buffer = NULL;
-    size_t len = sizeof(uint32_t);
     for(i = 0; i < NUM_OF_UUIDS; i++)
     {
         ret = gattlib_read_char_by_uuid(gatt_connection, config.uuids[i], (void**)&buffer, &len);
         if(ret != GATTLIB_SUCCESS)
         {
-            printf("UUID not found\n");
+            gattlib_uuid_to_string(config.uuids[i], uuid_str, sizeof(uuid_str));
+            printf("Could not read data from: %s.\n",uuid_str);
         }
-        for(j; j < len; j++)
-        {
-            printf("%02x ", buffer[j]);
+        else
+        {   printf("Read UUID completed: ");
+            for(j = 0; j < len; j++)
+            {
+                printf("%02x ", buffer[j]);
+            }
+            printf("\n");
+            switch(i)
+            {
+                case 0: decoder_TVOC();
+                    break;
+                case 1: decoder_ECO2();
+                    break;
+                case 2: decoder_HALLFIELDSTATE();
+                    break;
+                case 3: decoder_HALLFIELDSTRENGTH();
+                    break;
+                case 4: decoder_UVINDEX();
+                    break;
+                case 5: decoder_AMBLIGHT();
+                    break;
+                case 6: decoder_TEMP();
+                    break;
+                case 7: decoder_HUM();
+                    break;
+                case 8: decoder_SOUND();
+                    break;
+                default: /* Do nothing */
+                    break;
+            }
+            free(buffer);
         }
-        printf("\n");
     }
-    // TODO: Handle buffer value.
     free(characteristics);
     gattlib_disconnect(gatt_connection);
 }
 
+void decoder_TVOC()
+{
+
+}
+
+void decoder_ECO2()
+{
+
+}
+
+void decoder_HALLFIELDSTATE()
+{
+
+}
+
+void decoder_HALLFIELDSTRENGTH()
+{
+
+}
+
+void decoder_UVINDEX()
+{
+
+}
+
+void decoder_AMBLIGHT()
+{
+
+}
+
+void decoder_TEMP()
+{
+
+}
+
+void decoder_HUM()
+{
+
+}
+
+void decoder_SOUND()
+{
+
+}
