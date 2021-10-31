@@ -50,7 +50,7 @@
 #define SL_TB_1 "00:0B:57:64:8F:DD"
 
 typedef struct Config {
-    uuid_t  uuids[NUM_OF_UUIDS][MAX_LEN_UUID_STR + 1];
+    uuid_t uuids[NUM_OF_UUIDS][MAX_LEN_UUID_STR + 1];
 
 }Config;
 
