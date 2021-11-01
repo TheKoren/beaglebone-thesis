@@ -16,7 +16,7 @@
 #include "data.h"
 #include <time.h>
 
-#define NUM_OF_UUIDS 9u
+#define NUM_OF_UUIDS 7u
 #define NUM_OF_MAC 2u
 
 /*UUID Descriptors*/
@@ -26,9 +26,9 @@
 
 //#define BATTLVL_UUID "00002a19-0000-1000-8000-00805f9b34fb"
 
-#define HALLFIELDSTATE_UUID "f598dbc5-2f01-4ec5-9936-b3d1aa4f957f"
+//#define HALLFIELDSTATE_UUID "f598dbc5-2f01-4ec5-9936-b3d1aa4f957f"
 
-#define HALLFIELDSTRENGTH_UUID "f598dbc5-2f02-4ec5-9936-b3d1aa4f957f"
+//#define HALLFIELDSTRENGTH_UUID "f598dbc5-2f02-4ec5-9936-b3d1aa4f957f"
 
 //#define PRESSURE_UUID "00002902-0000-1000-8000-00805f9b34fb"
 
@@ -49,22 +49,28 @@
 #define SL_TB_0 "14:B4:57:6D:A5:6D"
 #define SL_TB_1 "00:0B:57:64:8F:DD"
 
-typedef struct Config {
+typedef struct Control {
     uuid_t uuids[NUM_OF_UUIDS][MAX_LEN_UUID_STR + 1];
+    uint16_t TVOC;
+    uint16_t ECO2;
+    uint8_t UV;
+    uint32_t AMB;
+    uint16_t TEMP;
+    uint16_t HUM;
+    uint16_t SOUND;
+}Control;
 
-}Config;
-
-extern Config config;
-void decoder_TVOC();
-void decoder_ECO2();
-void decoder_HALLFIELDSTATE();
-void decoder_HALLFIELDSTRENGTH();
-void decoder_UVINDEX();
-void decoder_AMBLIGHT();
-void decoder_TEMP();
-void decoder_HUM();
-void decoder_SOUND();
+extern Control control;
+void decoder_TVOC(const uint8_t * buffer, size_t len);
+void decoder_ECO2(const uint8_t * buffer, size_t len);
+void decoder_UVINDEX(const uint8_t * buffer, size_t len);
+void decoder_AMBLIGHT(const uint8_t * buffer, size_t len);
+void decoder_TEMP(const uint8_t * buffer, size_t len);
+void decoder_HUM(const uint8_t * buffer, size_t len);
+void decoder_SOUND(const uint8_t * buffer, size_t len);
 void ble_handler(void);
 void ble_connect_device(char * address);
+uint32_t pow(uint8_t, uint8_t);
+void controlprint(void);
 
 #endif //THESIS_BLESCAN_H

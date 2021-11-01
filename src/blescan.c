@@ -7,15 +7,15 @@
 
 /* Global variables */
 
-Config config;
+Control control;
 
 char * uuids_str[NUM_OF_UUIDS] =
         {
             TVOC_UUID,
             ECO2_UUID,
             //BATTLVL_UUID,
-            HALLFIELDSTATE_UUID,
-            HALLFIELDSTRENGTH_UUID,
+            //HALLFIELDSTATE_UUID,
+            //HALLFIELDSTRENGTH_UUID,
             //PRESSURE_UUID,
             UVINDEX_UUID,
             AMBLIGHT_UUID,
@@ -40,7 +40,7 @@ void ble_handler(void)
     ret = gattlib_adapter_open(adapter_name, &adapter);
     for(i = 0; i < NUM_OF_UUIDS; i++)
     {
-        gattlib_string_to_uuid(uuids_str[i],MAX_LEN_UUID_STR + 1,config.uuids[i]);
+        gattlib_string_to_uuid(uuids_str[i],MAX_LEN_UUID_STR + 1, control.uuids[i]);
     }
     if(ret)
     {
@@ -55,7 +55,7 @@ void ble_handler(void)
 
 void ble_connect_device(char * address)
 {
-    gatt_connection_t* gatt_connection; // TODO: Understand
+    gatt_connection_t* gatt_connection;
     gattlib_primary_service_t* services;
     gattlib_characteristic_t* characteristics;
 
@@ -108,10 +108,10 @@ void ble_connect_device(char * address)
 
     for(i = 0; i < NUM_OF_UUIDS; i++)
     {
-        ret = gattlib_read_char_by_uuid(gatt_connection, config.uuids[i], (void**)&buffer, &len);
+        ret = gattlib_read_char_by_uuid(gatt_connection, control.uuids[i], (void**)&buffer, &len);
         if(ret != GATTLIB_SUCCESS)
         {
-            gattlib_uuid_to_string(config.uuids[i], uuid_str, sizeof(uuid_str));
+            gattlib_uuid_to_string(control.uuids[i], uuid_str, sizeof(uuid_str));
             printf("Could not read data from: %s.\n",uuid_str);
         }
         else
@@ -123,23 +123,19 @@ void ble_connect_device(char * address)
             printf("\n");
             switch(i)
             {
-                case 0: decoder_TVOC();
+                case 0: decoder_TVOC(buffer, len);
                     break;
-                case 1: decoder_ECO2();
+                case 1: decoder_ECO2(buffer, len);
                     break;
-                case 2: decoder_HALLFIELDSTATE();
+                case 2: decoder_UVINDEX(buffer, len);
                     break;
-                case 3: decoder_HALLFIELDSTRENGTH();
+                case 3: decoder_AMBLIGHT(buffer, len);
                     break;
-                case 4: decoder_UVINDEX();
+                case 4: decoder_TEMP(buffer, len);
                     break;
-                case 5: decoder_AMBLIGHT();
+                case 5: decoder_HUM(buffer, len);
                     break;
-                case 6: decoder_TEMP();
-                    break;
-                case 7: decoder_HUM();
-                    break;
-                case 8: decoder_SOUND();
+                case 6: decoder_SOUND(buffer, len);
                     break;
                 default: /* Do nothing */
                     break;
@@ -149,49 +145,107 @@ void ble_connect_device(char * address)
     }
     free(characteristics);
     gattlib_disconnect(gatt_connection);
+
+    controlprint();
 }
 
-void decoder_TVOC()
+uint32_t pow(uint8_t base, uint8_t power)
 {
-
+    uint32_t result = 1;
+    for (int i = 1; i <= power; i++)
+    {
+        result *= base;
+    }
+    return result;
 }
 
-void decoder_ECO2()
+void decoder_TVOC(const uint8_t * buffer, size_t len)
 {
-
+    uint16_t sum = 0;
+    uint8_t j = 0;
+    for(int i = 0; i < len; i++)
+    {
+        sum = sum + (uint16_t)buffer[i] * pow(16,j);
+        j = j + 2;
+    }
+    control.TVOC = sum;
 }
 
-void decoder_HALLFIELDSTATE()
+void decoder_ECO2(const uint8_t * buffer, size_t len)
 {
-
+    uint16_t sum = 0;
+    uint8_t j = 0;
+    for(int i = 0; i < len; i++)
+    {
+        sum = sum + (uint16_t)buffer[i] * pow(16,j);
+        j = j + 2;
+    }
+    control.ECO2  = sum;
 }
 
-void decoder_HALLFIELDSTRENGTH()
+void decoder_UVINDEX(const uint8_t * buffer, size_t len)
 {
-
+    uint8_t sum = 0;
+    uint8_t j = 0;
+    for(int i = 0; i < len; i++)
+    {
+        sum = sum + (uint8_t)buffer[i] * pow(16,j);
+        j = j + 2;
+    }
+    control.UV = sum;
 }
 
-void decoder_UVINDEX()
+void decoder_AMBLIGHT(const uint8_t * buffer, size_t len)
 {
-
+    uint32_t sum = 0;
+    uint8_t j = 0;
+    for(int i = 0; i < len; i++)
+    {
+        sum = sum + (uint32_t)buffer[i] * pow(16,j);
+        j = j + 2;
+    }
+    control.AMB = sum;
 }
 
-void decoder_AMBLIGHT()
+void decoder_TEMP(const uint8_t * buffer, size_t len)
 {
-
+    uint16_t sum = 0;
+    uint8_t j = 0;
+    for(int i = 0; i < len; i++)
+    {
+        sum = sum + (uint16_t)buffer[i] * pow(16,j);
+        j = j + 2;
+    }
+    control.TEMP = sum;
 }
 
-void decoder_TEMP()
+void decoder_HUM(const uint8_t * buffer, size_t len)
 {
-
+    uint16_t sum = 0;
+    uint8_t j = 0;
+    for(int i = 0; i < len; i++)
+    {
+        sum = sum + (uint16_t)buffer[i] * pow(16,j);
+        j = j + 2;
+    }
+    control.HUM = sum;
 }
 
-void decoder_HUM()
+void decoder_SOUND(const uint8_t * buffer, size_t len)
 {
-
+    uint16_t sum = 0;
+    uint8_t j = 0;
+    for(int i = 0; i < len; i++)
+    {
+        sum = sum + (uint16_t)buffer[i] * pow(16,j);
+        j = j + 2;
+    }
+    control.SOUND = sum;
 }
 
-void decoder_SOUND()
+void controlprint()
 {
-
+    printf("=== Values from ThunderBoard ===\n\n");
+    printf("TVOC: %02x\nECO2: %02x\nUV: %02x\nAMB: %02x\nTEMP: %02x\nHUM: %02x\nSOUND: %02x\n", control.TVOC,
+                                    control.ECO2, control.UV, control.AMB, control.TEMP, control. HUM, control.SOUND);
 }

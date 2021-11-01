@@ -45,5 +45,5 @@ void cli_caseMeasure(void)
 }
 void cli_caseDeleteData(void)
 {
-    // data.h, data.c, config
+    // data.h, data.c, control
 }
