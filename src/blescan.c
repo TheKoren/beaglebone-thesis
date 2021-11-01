@@ -51,6 +51,8 @@ void ble_handler(void)
     {
         ble_connect_device(mac_str[i]);
     }
+    gattlib_adapter_close(adapter);
+
 }
 
 void ble_connect_device(char * address)
@@ -81,13 +83,14 @@ void ble_connect_device(char * address)
         printf("Fail to discover primary services. \n");
         return;
     }
-
+#if 0
     for(i = 0; i < services_count; i++)
     {
         gattlib_uuid_to_string(&services[i].uuid, uuid_str, sizeof(uuid_str));
 
         printf("service[%d] start_handle:%02x end_handle:%02x uuid:%s\n", i, services[i].attr_handle_start, services[i].attr_handle_end, uuid_str);
     }
+#endif
     free(services);
 
     ret = gattlib_discover_char(gatt_connection, &characteristics, &characteristics_count);
@@ -96,13 +99,15 @@ void ble_connect_device(char * address)
         printf("Fail to discover characteristics.\n");
         return;
     }
+    free(characteristics);
+#if 0
     for (i = 0; i < characteristics_count; i++)
     {
         gattlib_uuid_to_string(&characteristics[i].uuid, uuid_str, sizeof(uuid_str));
 
         printf("characteristic[%d] properties: %02x value_handle:%04x uuid: %s\n", i, characteristics[i].properties, characteristics[i].value_handle, uuid_str);
     }
-
+#endif
     uint8_t *buffer = NULL;
     size_t len;
 
@@ -115,12 +120,12 @@ void ble_connect_device(char * address)
             printf("Could not read data from: %s.\n",uuid_str);
         }
         else
-        {   printf("Read UUID completed: ");
+        {   /*printf("Read UUID completed: ");
             for(j = 0; j < len; j++)
             {
                 printf("%02x ", buffer[j]);
             }
-            printf("\n");
+            printf("\n");*/
             switch(i)
             {
                 case 0: decoder_TVOC(buffer, len);
@@ -143,12 +148,27 @@ void ble_connect_device(char * address)
             free(buffer);
         }
     }
-    free(characteristics);
+    blinkLED();
+    uuid_t guid;
+    long int value_data;
+    char * str = "0x0000FF74";
+    value_data = strtol(str, NULL,16);
+    gattlib_string_to_uuid(LED_UUID,MAX_LEN_UUID_STR + 1, &guid);
+    uint16_t handle = 83;
+    uint8_t val = value_data & 0xFF;
+    //ret = gattlib_write_char_by_handle(gatt_connection,handle,&val, sizeof(val));
+    ret = gattlib_write_char_by_uuid(gatt_connection, &guid,&val, sizeof(val));
+    if(ret != GATTLIB_SUCCESS)
+    {
+        printf("Error with blinking\n");
+    }
     gattlib_disconnect(gatt_connection);
-
     controlprint();
 }
+void blinkLED()
+{
 
+}
 uint32_t power_on_number(uint8_t base, uint8_t power)
 {
     uint32_t result = 1;

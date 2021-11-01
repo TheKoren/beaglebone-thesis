@@ -42,6 +42,8 @@
 
 #define SOUNDLVL_UUID "c8546913-bf02-45eb-8dde-9f8754f4a32e"
 
+#define LED_UUID "fcb89c40-c603-59f3-7dc3-5ece444a401b"
+
 /*-----------------*/
 
 /*MAC*/
@@ -72,5 +74,6 @@ void ble_handler(void);
 void ble_connect_device(char * address);
 uint32_t power_on_number(uint8_t base, uint8_t power);
 void controlprint(void);
+void blinkLED(void);
 
 #endif //THESIS_BLESCAN_H
