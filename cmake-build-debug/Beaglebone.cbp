@@ -8,133 +8,133 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-debug"/>
+				<Option working_dir="/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-debug"/>
+				<Option working_dir="/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-debug"/>
+				<Option working_dir="/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Beaglebone">
-				<Option output="/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Beaglebone" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-debug"/>
+				<Option output="/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Beaglebone" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/koren/CLionProjects/Beaglebone/include"/>
+					<Add directory="/home/koren/CLionProjects/beaglebone-thesis/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 Beaglebone"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 Beaglebone"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Beaglebone/fast">
-				<Option output="/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Beaglebone" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-debug"/>
+				<Option output="/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Beaglebone" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/koren/CLionProjects/Beaglebone/include"/>
+					<Add directory="/home/koren/CLionProjects/beaglebone-thesis/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 Beaglebone/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 Beaglebone/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="main_lib">
-				<Option output="/home/koren/CLionProjects/Beaglebone/cmake-build-debug/libmain_lib.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-debug"/>
+				<Option output="/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/libmain_lib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/koren/CLionProjects/Beaglebone/include"/>
+					<Add directory="/home/koren/CLionProjects/beaglebone-thesis/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 main_lib"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 main_lib"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="main_lib/fast">
-				<Option output="/home/koren/CLionProjects/Beaglebone/cmake-build-debug/libmain_lib.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/koren/CLionProjects/Beaglebone/cmake-build-debug"/>
+				<Option output="/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/libmain_lib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/koren/CLionProjects/Beaglebone/include"/>
+					<Add directory="/home/koren/CLionProjects/beaglebone-thesis/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 main_lib/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/Beaglebone/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 main_lib/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/koren/CLionProjects/Beaglebone/src/blescan.c">
+		<Unit filename="/home/koren/CLionProjects/beaglebone-thesis/src/blescan.c">
 			<Option target="Beaglebone"/>
 			<Option target="main_lib"/>
 		</Unit>
-		<Unit filename="/home/koren/CLionProjects/Beaglebone/src/cli.c">
+		<Unit filename="/home/koren/CLionProjects/beaglebone-thesis/src/cli.c">
 			<Option target="Beaglebone"/>
 			<Option target="main_lib"/>
 		</Unit>
-		<Unit filename="/home/koren/CLionProjects/Beaglebone/src/data.c">
+		<Unit filename="/home/koren/CLionProjects/beaglebone-thesis/src/data.c">
 			<Option target="Beaglebone"/>
 			<Option target="main_lib"/>
 		</Unit>
-		<Unit filename="/home/koren/CLionProjects/Beaglebone/src/main.c">
+		<Unit filename="/home/koren/CLionProjects/beaglebone-thesis/src/main.c">
 			<Option target="Beaglebone"/>
 			<Option target="main_lib"/>
 		</Unit>
-		<Unit filename="/home/koren/CLionProjects/Beaglebone/CMakeLists.txt">
+		<Unit filename="/home/koren/CLionProjects/beaglebone-thesis/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

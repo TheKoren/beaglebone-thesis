@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/koren/CLionProjects/Beaglebone/src/blescan.c" "/home/koren/CLionProjects/Beaglebone/cmake-build-debug/CMakeFiles/main_lib.dir/src/blescan.c.o"
-  "/home/koren/CLionProjects/Beaglebone/src/cli.c" "/home/koren/CLionProjects/Beaglebone/cmake-build-debug/CMakeFiles/main_lib.dir/src/cli.c.o"
-  "/home/koren/CLionProjects/Beaglebone/src/data.c" "/home/koren/CLionProjects/Beaglebone/cmake-build-debug/CMakeFiles/main_lib.dir/src/data.c.o"
-  "/home/koren/CLionProjects/Beaglebone/src/main.c" "/home/koren/CLionProjects/Beaglebone/cmake-build-debug/CMakeFiles/main_lib.dir/src/main.c.o"
+  "/home/koren/CLionProjects/beaglebone-thesis/src/blescan.c" "/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles/main_lib.dir/src/blescan.c.o"
+  "/home/koren/CLionProjects/beaglebone-thesis/src/cli.c" "/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles/main_lib.dir/src/cli.c.o"
+  "/home/koren/CLionProjects/beaglebone-thesis/src/data.c" "/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles/main_lib.dir/src/data.c.o"
+  "/home/koren/CLionProjects/beaglebone-thesis/src/main.c" "/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles/main_lib.dir/src/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

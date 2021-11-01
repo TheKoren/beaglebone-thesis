@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -Dmain_lib_EXPORTS
 
-C_INCLUDES = -I/home/koren/CLionProjects/Beaglebone/include
+C_INCLUDES = -I/home/koren/CLionProjects/beaglebone-thesis/include
 
 C_FLAGS = -g -fPIC -std=gnu11
 

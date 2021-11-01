@@ -14,8 +14,7 @@ Options:\n \
 
 int commandInterpreter(int argc, char *const *argv)
 {
-    int opt = 0;
-
+    int opt;
     while((opt = getopt(argc,argv, "hmd")) != -1)
     {
         switch(opt)
@@ -29,8 +28,11 @@ int commandInterpreter(int argc, char *const *argv)
             case 'd':
                 cli_caseDeleteData();
                 break;
+            default:
+                return -1;
         }
     }
+    return 1;
 }
 
 void cli_caseHelp(void)
@@ -42,8 +44,10 @@ void cli_caseMeasure(void)
 {
     // Call gatttool functionalites
     ble_handler();
+    exit(EXIT_SUCCESS);
 }
 void cli_caseDeleteData(void)
 {
     // data.h, data.c, control
+    exit(EXIT_SUCCESS);
 }

@@ -1,1 +1,0 @@
-/usr/bin/cc -g CMakeFiles/thesis.dir/src/main.c.o CMakeFiles/thesis.dir/src/data.c.o CMakeFiles/thesis.dir/src/cli.c.o CMakeFiles/thesis.dir/src/blescan.c.o -o thesis  -lgattlib 

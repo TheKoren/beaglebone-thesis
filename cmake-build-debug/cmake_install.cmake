@@ -1,4 +1,4 @@
-# Install script for directory: /home/koren/CLionProjects/Beaglebone
+# Install script for directory: /home/koren/CLionProjects/beaglebone-thesis
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/koren/CLionProjects/Beaglebone/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

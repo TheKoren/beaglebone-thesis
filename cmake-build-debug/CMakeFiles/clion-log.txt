@@ -1,4 +1,13 @@
-/snap/clion/169/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/koren/CLionProjects/Beaglebone
+/snap/clion/169/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/koren/CLionProjects/beaglebone-thesis
+-- The C compiler identification is GNU 9.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for one of the modules 'gattlib'
+-- Checking for one of the modules 'libpcre'
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/koren/CLionProjects/Beaglebone/cmake-build-debug
+-- Build files have been written to: /home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug

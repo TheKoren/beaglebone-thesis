@@ -53,10 +53,10 @@ RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/koren/CLionProjects/Beaglebone
+CMAKE_SOURCE_DIR = /home/koren/CLionProjects/beaglebone-thesis
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/koren/CLionProjects/Beaglebone/cmake-build-debug
+CMAKE_BINARY_DIR = /home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main_lib.dir/depend.make
@@ -68,55 +68,55 @@ include CMakeFiles/main_lib.dir/flags.make
 
 CMakeFiles/main_lib.dir/src/main.c.o: CMakeFiles/main_lib.dir/flags.make
 CMakeFiles/main_lib.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/Beaglebone/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main_lib.dir/src/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main_lib.dir/src/main.c.o -c /home/koren/CLionProjects/Beaglebone/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main_lib.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main_lib.dir/src/main.c.o -c /home/koren/CLionProjects/beaglebone-thesis/src/main.c
 
 CMakeFiles/main_lib.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main_lib.dir/src/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/koren/CLionProjects/Beaglebone/src/main.c > CMakeFiles/main_lib.dir/src/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/koren/CLionProjects/beaglebone-thesis/src/main.c > CMakeFiles/main_lib.dir/src/main.c.i
 
 CMakeFiles/main_lib.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main_lib.dir/src/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/koren/CLionProjects/Beaglebone/src/main.c -o CMakeFiles/main_lib.dir/src/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/koren/CLionProjects/beaglebone-thesis/src/main.c -o CMakeFiles/main_lib.dir/src/main.c.s
 
 CMakeFiles/main_lib.dir/src/cli.c.o: CMakeFiles/main_lib.dir/flags.make
 CMakeFiles/main_lib.dir/src/cli.c.o: ../src/cli.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/Beaglebone/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main_lib.dir/src/cli.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main_lib.dir/src/cli.c.o -c /home/koren/CLionProjects/Beaglebone/src/cli.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main_lib.dir/src/cli.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main_lib.dir/src/cli.c.o -c /home/koren/CLionProjects/beaglebone-thesis/src/cli.c
 
 CMakeFiles/main_lib.dir/src/cli.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main_lib.dir/src/cli.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/koren/CLionProjects/Beaglebone/src/cli.c > CMakeFiles/main_lib.dir/src/cli.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/koren/CLionProjects/beaglebone-thesis/src/cli.c > CMakeFiles/main_lib.dir/src/cli.c.i
 
 CMakeFiles/main_lib.dir/src/cli.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main_lib.dir/src/cli.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/koren/CLionProjects/Beaglebone/src/cli.c -o CMakeFiles/main_lib.dir/src/cli.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/koren/CLionProjects/beaglebone-thesis/src/cli.c -o CMakeFiles/main_lib.dir/src/cli.c.s
 
 CMakeFiles/main_lib.dir/src/blescan.c.o: CMakeFiles/main_lib.dir/flags.make
 CMakeFiles/main_lib.dir/src/blescan.c.o: ../src/blescan.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/Beaglebone/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main_lib.dir/src/blescan.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main_lib.dir/src/blescan.c.o -c /home/koren/CLionProjects/Beaglebone/src/blescan.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main_lib.dir/src/blescan.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main_lib.dir/src/blescan.c.o -c /home/koren/CLionProjects/beaglebone-thesis/src/blescan.c
 
 CMakeFiles/main_lib.dir/src/blescan.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main_lib.dir/src/blescan.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/koren/CLionProjects/Beaglebone/src/blescan.c > CMakeFiles/main_lib.dir/src/blescan.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/koren/CLionProjects/beaglebone-thesis/src/blescan.c > CMakeFiles/main_lib.dir/src/blescan.c.i
 
 CMakeFiles/main_lib.dir/src/blescan.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main_lib.dir/src/blescan.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/koren/CLionProjects/Beaglebone/src/blescan.c -o CMakeFiles/main_lib.dir/src/blescan.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/koren/CLionProjects/beaglebone-thesis/src/blescan.c -o CMakeFiles/main_lib.dir/src/blescan.c.s
 
 CMakeFiles/main_lib.dir/src/data.c.o: CMakeFiles/main_lib.dir/flags.make
 CMakeFiles/main_lib.dir/src/data.c.o: ../src/data.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/Beaglebone/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main_lib.dir/src/data.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main_lib.dir/src/data.c.o -c /home/koren/CLionProjects/Beaglebone/src/data.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main_lib.dir/src/data.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main_lib.dir/src/data.c.o -c /home/koren/CLionProjects/beaglebone-thesis/src/data.c
 
 CMakeFiles/main_lib.dir/src/data.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main_lib.dir/src/data.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/koren/CLionProjects/Beaglebone/src/data.c > CMakeFiles/main_lib.dir/src/data.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/koren/CLionProjects/beaglebone-thesis/src/data.c > CMakeFiles/main_lib.dir/src/data.c.i
 
 CMakeFiles/main_lib.dir/src/data.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main_lib.dir/src/data.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/koren/CLionProjects/Beaglebone/src/data.c -o CMakeFiles/main_lib.dir/src/data.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/koren/CLionProjects/beaglebone-thesis/src/data.c -o CMakeFiles/main_lib.dir/src/data.c.s
 
 # Object files for target main_lib
 main_lib_OBJECTS = \
@@ -134,7 +134,7 @@ libmain_lib.so: CMakeFiles/main_lib.dir/src/blescan.c.o
 libmain_lib.so: CMakeFiles/main_lib.dir/src/data.c.o
 libmain_lib.so: CMakeFiles/main_lib.dir/build.make
 libmain_lib.so: CMakeFiles/main_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/koren/CLionProjects/Beaglebone/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libmain_lib.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libmain_lib.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main_lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -146,6 +146,6 @@ CMakeFiles/main_lib.dir/clean:
 .PHONY : CMakeFiles/main_lib.dir/clean
 
 CMakeFiles/main_lib.dir/depend:
-	cd /home/koren/CLionProjects/Beaglebone/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/koren/CLionProjects/Beaglebone /home/koren/CLionProjects/Beaglebone /home/koren/CLionProjects/Beaglebone/cmake-build-debug /home/koren/CLionProjects/Beaglebone/cmake-build-debug /home/koren/CLionProjects/Beaglebone/cmake-build-debug/CMakeFiles/main_lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/koren/CLionProjects/beaglebone-thesis /home/koren/CLionProjects/beaglebone-thesis /home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug /home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug /home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles/main_lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main_lib.dir/depend
 

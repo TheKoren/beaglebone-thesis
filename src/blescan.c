@@ -149,7 +149,7 @@ void ble_connect_device(char * address)
     controlprint();
 }
 
-uint32_t pow(uint8_t base, uint8_t power)
+uint32_t power_on_number(uint8_t base, uint8_t power)
 {
     uint32_t result = 1;
     for (int i = 1; i <= power; i++)
@@ -165,7 +165,7 @@ void decoder_TVOC(const uint8_t * buffer, size_t len)
     uint8_t j = 0;
     for(int i = 0; i < len; i++)
     {
-        sum = sum + (uint16_t)buffer[i] * pow(16,j);
+        sum = sum + (uint16_t)buffer[i] * power_on_number(16, j);
         j = j + 2;
     }
     control.TVOC = sum;
@@ -177,7 +177,7 @@ void decoder_ECO2(const uint8_t * buffer, size_t len)
     uint8_t j = 0;
     for(int i = 0; i < len; i++)
     {
-        sum = sum + (uint16_t)buffer[i] * pow(16,j);
+        sum = sum + (uint16_t)buffer[i] * power_on_number(16, j);
         j = j + 2;
     }
     control.ECO2  = sum;
@@ -189,7 +189,7 @@ void decoder_UVINDEX(const uint8_t * buffer, size_t len)
     uint8_t j = 0;
     for(int i = 0; i < len; i++)
     {
-        sum = sum + (uint8_t)buffer[i] * pow(16,j);
+        sum = sum + (uint8_t)buffer[i] * power_on_number(16, j);
         j = j + 2;
     }
     control.UV = sum;
@@ -201,7 +201,7 @@ void decoder_AMBLIGHT(const uint8_t * buffer, size_t len)
     uint8_t j = 0;
     for(int i = 0; i < len; i++)
     {
-        sum = sum + (uint32_t)buffer[i] * pow(16,j);
+        sum = sum + (uint32_t)buffer[i] * power_on_number(16, j);
         j = j + 2;
     }
     control.AMB = sum;
@@ -213,7 +213,7 @@ void decoder_TEMP(const uint8_t * buffer, size_t len)
     uint8_t j = 0;
     for(int i = 0; i < len; i++)
     {
-        sum = sum + (uint16_t)buffer[i] * pow(16,j);
+        sum = sum + (uint16_t)buffer[i] * power_on_number(16, j);
         j = j + 2;
     }
     control.TEMP = sum;
@@ -225,7 +225,7 @@ void decoder_HUM(const uint8_t * buffer, size_t len)
     uint8_t j = 0;
     for(int i = 0; i < len; i++)
     {
-        sum = sum + (uint16_t)buffer[i] * pow(16,j);
+        sum = sum + (uint16_t)buffer[i] * power_on_number(16, j);
         j = j + 2;
     }
     control.HUM = sum;
@@ -237,7 +237,7 @@ void decoder_SOUND(const uint8_t * buffer, size_t len)
     uint8_t j = 0;
     for(int i = 0; i < len; i++)
     {
-        sum = sum + (uint16_t)buffer[i] * pow(16,j);
+        sum = sum + (uint16_t)buffer[i] * power_on_number(16, j);
         j = j + 2;
     }
     control.SOUND = sum;
@@ -246,6 +246,6 @@ void decoder_SOUND(const uint8_t * buffer, size_t len)
 void controlprint()
 {
     printf("=== Values from ThunderBoard ===\n\n");
-    printf("TVOC: %02x\nECO2: %02x\nUV: %02x\nAMB: %02x\nTEMP: %02x\nHUM: %02x\nSOUND: %02x\n", control.TVOC,
+    printf("TVOC: 0x%02x\nECO2: 0x%02x\nUV: 0x%02x\nAMB: 0x%02x\nTEMP: 0x%02x\nHUM: 0x%02x\nSOUND: 0x%02x\n", control.TVOC,
                                     control.ECO2, control.UV, control.AMB, control.TEMP, control. HUM, control.SOUND);
 }
