@@ -118,6 +118,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/koren/CLionProjects/beaglebone-thesis/include/data.h">
+			<Option target="Beaglebone"/>
+		</Unit>
 		<Unit filename="/home/koren/CLionProjects/beaglebone-thesis/src/blescan.c">
 			<Option target="Beaglebone"/>
 			<Option target="main_lib"/>

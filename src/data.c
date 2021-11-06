@@ -1,8 +1,10 @@
 //
-// Created by koren on 2021. 10. 15..
+// Created by koren on 2021. 11. 06..
 //
 
 #include "data.h"
-#include "blescan.h"
 
+void datalogging(const char * address)
+{
 
+}

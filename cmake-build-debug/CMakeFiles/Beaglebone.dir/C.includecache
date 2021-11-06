@@ -17,15 +17,9 @@ unistd.h
 -
 string.h
 -
-fcntl.h
--
-termios.h
--
 gattlib.h
-../include/gattlib.h
+-
 data.h
-../include/data.h
-time.h
 -
 
 ../include/cli.h
@@ -39,16 +33,8 @@ unistd.h
 -
 string.h
 -
-fcntl.h
--
-termios.h
--
-data.h
-../include/data.h
 
 ../include/data.h
-blescan.h
-../include/blescan.h
 
 /home/koren/CLionProjects/beaglebone-thesis/src/blescan.c
 blescan.h

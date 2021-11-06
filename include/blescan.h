@@ -10,19 +10,16 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <string.h>
-#include <fcntl.h>
-#include <termios.h>
-#include "gattlib.h"
-#include "data.h"
-#include <time.h>
+#include <gattlib.h>
+#include <data.h>
 
 #define NUM_OF_UUIDS 7u
 #define NUM_OF_MAC 2u
 
 /*UUID Descriptors*/
-#define TVOC_UUID "efd658ae-c401-ef33-76e7-91b00019103b"
+#define TVOC_UUID "efd658ae-c402-ef33-76e7-91b00019103b"
 
-#define ECO2_UUID "efd658ae-c402-ef33-76e7-91b00019103b"
+#define ECO2_UUID "efd658ae-c401-ef33-76e7-91b00019103b"
 
 //#define BATTLVL_UUID "00002a19-0000-1000-8000-00805f9b34fb"
 
@@ -51,15 +48,21 @@
 #define SL_TB_0 "14:B4:57:6D:A5:6D"
 #define SL_TB_1 "00:0B:57:64:8F:DD"
 
+/*RGB CODES*/
+
+#define RED "0x0000FF7F"
+#define YELLOW "0x00FFFF7F"
+#define GREEN "0x00FF007F"
+
 typedef struct Control {
     uuid_t uuids[NUM_OF_UUIDS][MAX_LEN_UUID_STR + 1];
-    uint16_t TVOC;
-    uint16_t ECO2;
-    uint8_t UV;
-    uint32_t AMB;
-    uint16_t TEMP;
-    uint16_t HUM;
-    uint16_t SOUND;
+    double TVOC;
+    long int ECO2;
+    double UV;
+    double AMB;
+    double TEMP;
+    double HUM;
+    double SOUND;
 }Control;
 
 extern Control control;
@@ -74,6 +77,5 @@ void ble_handler(void);
 void ble_connect_device(char * address);
 uint32_t power_on_number(uint8_t base, uint8_t power);
 void controlprint(void);
-void blinkLED(void);
 
 #endif //THESIS_BLESCAN_H

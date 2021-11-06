@@ -11,11 +11,8 @@ CMakeFiles/Beaglebone.dir/src/cli.c.o: \
  ../include/data.h \
  ../src/cli.c
 CMakeFiles/Beaglebone.dir/src/data.c.o: \
- ../include/blescan.h \
  ../include/data.h \
  ../src/data.c
 CMakeFiles/Beaglebone.dir/src/main.c.o: \
- ../include/blescan.h \
  ../include/cli.h \
- ../include/data.h \
  ../src/main.c

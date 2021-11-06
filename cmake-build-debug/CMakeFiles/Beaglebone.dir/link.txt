@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/Beaglebone.dir/src/main.c.o CMakeFiles/Beaglebone.dir/src/data.c.o CMakeFiles/Beaglebone.dir/src/cli.c.o CMakeFiles/Beaglebone.dir/src/blescan.c.o -o Beaglebone  -lgattlib 
+/usr/bin/cc -g CMakeFiles/Beaglebone.dir/src/main.c.o CMakeFiles/Beaglebone.dir/src/cli.c.o CMakeFiles/Beaglebone.dir/src/blescan.c.o CMakeFiles/Beaglebone.dir/src/data.c.o -o Beaglebone  -lgattlib 

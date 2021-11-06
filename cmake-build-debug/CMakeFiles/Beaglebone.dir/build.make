@@ -79,22 +79,9 @@ CMakeFiles/Beaglebone.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Beaglebone.dir/src/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/koren/CLionProjects/beaglebone-thesis/src/main.c -o CMakeFiles/Beaglebone.dir/src/main.c.s
 
-CMakeFiles/Beaglebone.dir/src/data.c.o: CMakeFiles/Beaglebone.dir/flags.make
-CMakeFiles/Beaglebone.dir/src/data.c.o: ../src/data.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Beaglebone.dir/src/data.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Beaglebone.dir/src/data.c.o -c /home/koren/CLionProjects/beaglebone-thesis/src/data.c
-
-CMakeFiles/Beaglebone.dir/src/data.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Beaglebone.dir/src/data.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/koren/CLionProjects/beaglebone-thesis/src/data.c > CMakeFiles/Beaglebone.dir/src/data.c.i
-
-CMakeFiles/Beaglebone.dir/src/data.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Beaglebone.dir/src/data.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/koren/CLionProjects/beaglebone-thesis/src/data.c -o CMakeFiles/Beaglebone.dir/src/data.c.s
-
 CMakeFiles/Beaglebone.dir/src/cli.c.o: CMakeFiles/Beaglebone.dir/flags.make
 CMakeFiles/Beaglebone.dir/src/cli.c.o: ../src/cli.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Beaglebone.dir/src/cli.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Beaglebone.dir/src/cli.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Beaglebone.dir/src/cli.c.o -c /home/koren/CLionProjects/beaglebone-thesis/src/cli.c
 
 CMakeFiles/Beaglebone.dir/src/cli.c.i: cmake_force
@@ -107,7 +94,7 @@ CMakeFiles/Beaglebone.dir/src/cli.c.s: cmake_force
 
 CMakeFiles/Beaglebone.dir/src/blescan.c.o: CMakeFiles/Beaglebone.dir/flags.make
 CMakeFiles/Beaglebone.dir/src/blescan.c.o: ../src/blescan.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Beaglebone.dir/src/blescan.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Beaglebone.dir/src/blescan.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Beaglebone.dir/src/blescan.c.o -c /home/koren/CLionProjects/beaglebone-thesis/src/blescan.c
 
 CMakeFiles/Beaglebone.dir/src/blescan.c.i: cmake_force
@@ -118,20 +105,33 @@ CMakeFiles/Beaglebone.dir/src/blescan.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Beaglebone.dir/src/blescan.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/koren/CLionProjects/beaglebone-thesis/src/blescan.c -o CMakeFiles/Beaglebone.dir/src/blescan.c.s
 
+CMakeFiles/Beaglebone.dir/src/data.c.o: CMakeFiles/Beaglebone.dir/flags.make
+CMakeFiles/Beaglebone.dir/src/data.c.o: ../src/data.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Beaglebone.dir/src/data.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Beaglebone.dir/src/data.c.o -c /home/koren/CLionProjects/beaglebone-thesis/src/data.c
+
+CMakeFiles/Beaglebone.dir/src/data.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Beaglebone.dir/src/data.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/koren/CLionProjects/beaglebone-thesis/src/data.c > CMakeFiles/Beaglebone.dir/src/data.c.i
+
+CMakeFiles/Beaglebone.dir/src/data.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Beaglebone.dir/src/data.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/koren/CLionProjects/beaglebone-thesis/src/data.c -o CMakeFiles/Beaglebone.dir/src/data.c.s
+
 # Object files for target Beaglebone
 Beaglebone_OBJECTS = \
 "CMakeFiles/Beaglebone.dir/src/main.c.o" \
-"CMakeFiles/Beaglebone.dir/src/data.c.o" \
 "CMakeFiles/Beaglebone.dir/src/cli.c.o" \
-"CMakeFiles/Beaglebone.dir/src/blescan.c.o"
+"CMakeFiles/Beaglebone.dir/src/blescan.c.o" \
+"CMakeFiles/Beaglebone.dir/src/data.c.o"
 
 # External object files for target Beaglebone
 Beaglebone_EXTERNAL_OBJECTS =
 
 Beaglebone: CMakeFiles/Beaglebone.dir/src/main.c.o
-Beaglebone: CMakeFiles/Beaglebone.dir/src/data.c.o
 Beaglebone: CMakeFiles/Beaglebone.dir/src/cli.c.o
 Beaglebone: CMakeFiles/Beaglebone.dir/src/blescan.c.o
+Beaglebone: CMakeFiles/Beaglebone.dir/src/data.c.o
 Beaglebone: CMakeFiles/Beaglebone.dir/build.make
 Beaglebone: CMakeFiles/Beaglebone.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Beaglebone"

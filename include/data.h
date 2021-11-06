@@ -1,14 +1,10 @@
 //
-// Created by koren on 2021. 10. 15..
+// Created by koren on 2021. 11. 06..
 //
 
-#ifndef THESIS_DATA_H
-#define THESIS_DATA_H
+#ifndef BEAGLEBONE_DATA_H
+#define BEAGLEBONE_DATA_H
 
-#define BUFF_SIZE 1024
+void datalogging(const char * address);
 
-#include "blescan.h"
-
-bool get_address_from_config();
-
-#endif //THESIS_DATA_H
+#endif //BEAGLEBONE_DATA_H

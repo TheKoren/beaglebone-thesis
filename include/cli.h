@@ -10,9 +10,6 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <string.h>
-#include <fcntl.h>
-#include <termios.h>
-#include "data.h"
 
 int commandInterpreter(int argc, char *const *argv);
 
