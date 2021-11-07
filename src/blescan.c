@@ -18,13 +18,13 @@ char * uuids_str[NUM_OF_UUIDS] =
             //HALLFIELDSTATE_UUID,
             //HALLFIELDSTRENGTH_UUID,
             //PRESSURE_UUID,
-            ECO2_UUID,
+            HUM_UUID,
             SOUNDLVL_UUID,
             UVINDEX_UUID,
             AMBLIGHT_UUID,
             TEMP_UUID,
+            ECO2_UUID,
             TVOC_UUID,
-            HUM_UUID,
         };
 
 char * mac_str[NUM_OF_MAC] =
@@ -65,18 +65,17 @@ void ble_connect_device(char * address) {
     size_t len;
 
     for (i = 0; i < NUM_OF_UUIDS; i++) {
-        if(i == 0)
+        if(i == (NUM_OF_UUIDS - 2))
         {
-                    int debounce = 0;
+            int debounce = 0;
             do {
-                printf(".");
                 gattlib_read_char_by_uuid(gatt_connection, control.uuids[i], (void **) &buffer, &len);
                 decoder_ECO2(buffer, len);
-                if(control.ECO2 != 420)
+                if(control.ECO2 != 400)
                 {
                     debounce+=1;
                 }
-            } while (debounce == 0);
+            } while (debounce < 5);
         }
         ret = gattlib_read_char_by_uuid(gatt_connection, control.uuids[i], (void **) &buffer, &len);
         if (ret != GATTLIB_SUCCESS) {
@@ -85,6 +84,21 @@ void ble_connect_device(char * address) {
         } else {
             switch (i) {
                 case 0:
+                    decoder_HUM(buffer, len);
+                    break;
+                case 1:
+                    decoder_SOUND(buffer, len);
+                    break;
+                case 2:
+                    decoder_UVINDEX(buffer, len);
+                    break;
+                case 3:
+                    decoder_AMBLIGHT(buffer, len);
+                    break;
+                case 4:
+                    decoder_TEMP(buffer, len);
+                    break;
+                case 5:
                     decoder_ECO2(buffer, len);
                     char * str;
                     if(control.ECO2 < 600)
@@ -118,23 +132,8 @@ void ble_connect_device(char * address) {
                         }
                     }
                     break;
-                case 1:
-                    decoder_SOUND(buffer, len);
-                    break;
-                case 2:
-                    decoder_UVINDEX(buffer, len);
-                    break;
-                case 3:
-                    decoder_AMBLIGHT(buffer, len);
-                    break;
-                case 4:
-                    decoder_TEMP(buffer, len);
-                    break;
-                case 5:
-                    decoder_TVOC(buffer, len);
-                    break;
                 case 6:
-                    decoder_HUM(buffer, len);
+                    decoder_TVOC(buffer, len);
                     break;
                 default: /* Do nothing */
                     break;
@@ -144,8 +143,8 @@ void ble_connect_device(char * address) {
     }
     gattlib_disconnect(gatt_connection);
     controlprint();
+    printf("Successfully disconnected to the bluetooth device.\n");
     datalogging(address);
-    printf("--------------------------------------------------------------------------\n");
 
 }
 
@@ -168,7 +167,7 @@ void decoder_TVOC(const uint8_t * buffer, size_t len)
         sum = sum + (uint16_t)buffer[i] * power_on_number(16, j);
         j = j + 2;
     }
-    control.TVOC = (double)sum / 100;
+    control.TVOC = (int)sum;
 }
 
 void decoder_ECO2(const uint8_t * buffer, size_t len)
@@ -180,7 +179,7 @@ void decoder_ECO2(const uint8_t * buffer, size_t len)
         sum = sum + ((uint16_t)buffer[i] * power_on_number(16, j));
         j = j + 2;
     }
-    control.ECO2  = (long int)sum + 420;
+    control.ECO2  = (long int)sum;
 }
 
 void decoder_UVINDEX(const uint8_t * buffer, size_t len)
@@ -245,7 +244,6 @@ void decoder_SOUND(const uint8_t * buffer, size_t len)
 
 void controlprint()
 {
-    printf("=== Values from ThunderBoard ===\n\n");
-    printf("TVOC: %.2f ppb\nECO2: %li ppm\nUV: %.0f\nAMB: %.2f lx\nTEMP: %.2f °C\nHUM: %.2f %%\nSOUND: %.2f dB\n", control.TVOC,
+    printf("TVOC: %d ppd\neCO2: %li ppm\nUV Index: %.0f\nAmb light: %.2f Lux\nTemp: %.2f °C\nHumidity: %.2f %%RH\nSound Level: %.2f dBA\n", control.TVOC,
                                     control.ECO2, control.UV, control.AMB, control.TEMP, control. HUM, control.SOUND);
 }

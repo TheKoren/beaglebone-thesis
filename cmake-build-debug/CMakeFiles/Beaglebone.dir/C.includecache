@@ -22,27 +22,9 @@ gattlib.h
 data.h
 -
 
-../include/cli.h
-stdio.h
--
-stdlib.h
--
-stdbool.h
--
-unistd.h
--
-string.h
--
-
 ../include/data.h
 
 /home/koren/CLionProjects/beaglebone-thesis/src/blescan.c
-blescan.h
-/home/koren/CLionProjects/beaglebone-thesis/src/blescan.h
-
-/home/koren/CLionProjects/beaglebone-thesis/src/cli.c
-cli.h
-/home/koren/CLionProjects/beaglebone-thesis/src/cli.h
 blescan.h
 /home/koren/CLionProjects/beaglebone-thesis/src/blescan.h
 

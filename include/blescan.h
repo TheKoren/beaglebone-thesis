@@ -17,9 +17,9 @@
 #define NUM_OF_MAC 2u
 
 /*UUID Descriptors*/
-#define TVOC_UUID "efd658ae-c401-ef33-76e7-91b00019103b"
+#define TVOC_UUID "efd658ae-c402-ef33-76e7-91b00019103b"
 
-#define ECO2_UUID "efd658ae-c402-ef33-76e7-91b00019103b"
+#define ECO2_UUID "efd658ae-c401-ef33-76e7-91b00019103b"
 
 //#define BATTLVL_UUID "00002a19-0000-1000-8000-00805f9b34fb"
 
@@ -56,7 +56,7 @@
 
 typedef struct Control {
     uuid_t uuids[NUM_OF_UUIDS][MAX_LEN_UUID_STR + 1];
-    double TVOC;
+    int TVOC;
     long int ECO2;
     double UV;
     double AMB;
