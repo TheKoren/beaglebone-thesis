@@ -1,0 +1,2 @@
+.idea
+Bluetooth/cmake-build-debug/
