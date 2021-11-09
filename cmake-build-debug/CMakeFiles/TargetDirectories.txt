@@ -1,4 +1,0 @@
-/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles/Beaglebone.dir
-/home/koren/CLionProjects/beaglebone-thesis/cmake-build-debug/CMakeFiles/main_lib.dir

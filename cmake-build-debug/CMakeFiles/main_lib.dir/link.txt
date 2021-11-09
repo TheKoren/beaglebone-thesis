@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC -g -shared -Wl,-soname,libmain_lib.so -o libmain_lib.so CMakeFiles/main_lib.dir/src/main.c.o CMakeFiles/main_lib.dir/src/cli.c.o CMakeFiles/main_lib.dir/src/blescan.c.o CMakeFiles/main_lib.dir/src/data.c.o 
