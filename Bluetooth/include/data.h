@@ -5,6 +5,11 @@
 #ifndef BEAGLEBONE_DATA_H
 #define BEAGLEBONE_DATA_H
 
+#include "blescan.h"
+
 void datalogging(const char * address);
+void writeDataToFile(const char * address);
+
+
 
 #endif //BEAGLEBONE_DATA_H

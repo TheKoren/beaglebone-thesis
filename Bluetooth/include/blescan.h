@@ -12,6 +12,7 @@
 #include <string.h>
 #include <gattlib.h>
 #include <data.h>
+#include <time.h>
 
 #define NUM_OF_UUIDS 7u
 #define NUM_OF_MAC 2u
