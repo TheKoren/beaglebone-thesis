@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.10)
 project(Beaglebone C)
 
 set(CMAKE_C_STANDARD 11)
@@ -10,14 +10,14 @@ pkg_search_module(PCRE REQUIRED libpcre)
 add_library(
         main_lib
         SHARED
-        src/main.c
-        src/cli.c
-        src/blescan.c
-        src/data.c)
+        main.c
+        cli.c
+        blescan.c
+        data.c)
 
-set(SOURCE_FILES src/main.c src/cli.c src/blescan.c src/data.c include/data.h)
+set(SOURCE_FILES main.c cli.c blescan.c data.c)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_executable(Beaglebone ${SOURCE_FILES} ${HEADER_FILES})
 
-target_link_libraries(Beaglebone
-        gattlib)
+target_link_libraries(Beaglebone ${GATTLIB_LIBRARIES} ${GATTLIB_LDFLAGS} ${PCRE_LIBRARIES} pthread)
+
