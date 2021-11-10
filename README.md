@@ -27,3 +27,8 @@ szenzorkártyák, mint például a Silabs Thunderboard2, amik minden szükséges
 képesek mérni, és azt alkalmas kommunikációs felületen (pl. Bluetooth LE, BLE) elérhetővé
 tudják tenni, a fejlesztés egy rendszerintegrációs és szoftver fejlesztési feladatként
 fogalmazható meg.
+
+### English
+
+#### Assessment of Air Quality Using an IoT Solution
+TODO
