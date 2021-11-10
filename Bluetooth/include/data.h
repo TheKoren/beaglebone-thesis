@@ -9,7 +9,7 @@
 
 void datalogging(const char * address);
 void writeDataToFile(const char * address);
-
+void controlprint(void);
 
 
 #endif //BEAGLEBONE_DATA_H

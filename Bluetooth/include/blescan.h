@@ -77,6 +77,5 @@ void decoder_SOUND(const uint8_t * buffer, size_t len);
 void ble_handler(void);
 void ble_connect_device(char * address);
 uint32_t power_on_number(uint8_t base, uint8_t power);
-void controlprint(void);
 
 #endif //THESIS_BLESCAN_H

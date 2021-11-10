@@ -142,8 +142,6 @@ void ble_connect_device(char * address) {
         }
     }
     gattlib_disconnect(gatt_connection);
-    controlprint();
-    printf("Successfully disconnected to the bluetooth device.\n");
     datalogging(address);
 
 }
@@ -242,8 +240,3 @@ void decoder_SOUND(const uint8_t * buffer, size_t len)
     control.SOUND = (double)sum / 100;
 }
 
-void controlprint()
-{
-    printf("TVOC: %d ppd\neCO2: %li ppm\nUV Index: %.0f\nAmb light: %.2f Lux\nTemp: %.2f °C\nHumidity: %.2f %%RH\nSound Level: %.2f dBA\n", control.TVOC,
-                                    control.ECO2, control.UV, control.AMB, control.TEMP, control. HUM, control.SOUND);
-}
