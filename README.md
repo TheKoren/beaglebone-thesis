@@ -10,9 +10,9 @@ My Bachelor thesis for the Academic year 2021/22/1.
 
 ## Task
 
-###Hungarian
+### Hungarian
 
-####Levegő minőségének vizsgálata IoT megoldással
+#### Levegő minőségének vizsgálata IoT megoldással
 Az elérhető információk alapján oktatási intézményekben a nem megfelelő szellőztetés miatt
 gyakran kialakul olyan levegő minőség, ami a tanuláshoz szükséges aktív kognitív állapot
 elérését nagyon nehézzé vagy akár lehetetlenné teszi. A túl magas vagy túl alacsony
