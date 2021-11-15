@@ -10,25 +10,11 @@ My Bachelor thesis for the Academic year 2021/22/1.
 
 ## Task
 
-### Hungarian
+### Assessment of Air Quality Using an IoT Solution
 
-#### Levegő minőségének vizsgálata IoT megoldással
-Az elérhető információk alapján oktatási intézményekben a nem megfelelő szellőztetés miatt
-gyakran kialakul olyan levegő minőség, ami a tanuláshoz szükséges aktív kognitív állapot
-elérését nagyon nehézzé vagy akár lehetetlenné teszi. A túl magas vagy túl alacsony
-páratartalom, magas széndioxid (CO2) szint, vagy a jelenlévő illékony szerves vegyületek
-(Volatile Organic Compounds, VOC) is ilyen, a tanulási képességet rontó levegő jellemzők.
-Ezen kívül az általános környezeti paraméterek, mint például megvilágítás mértéke, az oktatási
-termekben megfigyelhető zaj is jelentősen befolyásolhatják a tanulás minőségét.
-Sajnos többnyire nem rendelkezünk objektív mérésekkel az ilyen levegő minőséget jellemző
-mennyiségek tekintetében és ezért felmerül egy Internet of Things (IoT) paradigmát alkalmazó
-levegő minőség mérő rendszer megvalósítása. Mivel rendelkezésre állnak olyan
-szenzorkártyák, mint például a Silabs Thunderboard2, amik minden szükséges jellemzőt
-képesek mérni, és azt alkalmas kommunikációs felületen (pl. Bluetooth LE, BLE) elérhetővé
-tudják tenni, a fejlesztés egy rendszerintegrációs és szoftver fejlesztési feladatként
-fogalmazható meg.
+Inadequate ventilation in different educational institutions often results in air quality that is not sufficient to effective teaching. Such air quality problems include humidity, carbon dioxide (CO2) levels, or the presence of volatile organic compounds (VOCs). In addition, general environmental parameters, such as lighting levels and noise in classrooms, are also factors which make it very difficult or sometimes impossible for students to achieve the active cognitive state necessary for learning.
 
-### English
+As part of my thesis, I set out to implement a measurement system using the IoT paradigm to address this problem. The measurement of different environmental characteristics in classrooms are performed by sensor cards from Silicon Labs, Thunderboard Sense 2. The sensor cards allow the creation of low-power systems, capable of handling measurement data on low-power communication interfaces. One of these interfaces is BLE (Bluetooth Low Energy), which was my choice to go with. The central node that scans the sensor network is implemented by a Beaglebone Wireless (BBW) single card computer, which is also able to communicate on this BLE platform.
 
-#### Assessment of Air Quality Using an IoT Solution
-TODO
+The air quality can be monitored via a WEB page, in accordance with the IoT approach, broken down into classrooms, and the system is also able to warn the occupants of the room by controlling the LEDs on the sensor cards.
+
