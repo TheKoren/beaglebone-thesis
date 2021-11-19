@@ -1,14 +1,12 @@
-var http = require('http');
-var fs = require('fs');
+const express = require('express')
+const app = express()
+const port = 3000
 
-var file = fs.readFile('test.txt', function(err,data){
-  if (err){
-    throw err;
-  }
-  else {
-    http.createServer(function(req,res) {
-      res.write(data);
-      res.end();
-    }).listen(8080);
-  }
-});
+app.use(express.static('public'))
+
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + '/index.html')
+})
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
