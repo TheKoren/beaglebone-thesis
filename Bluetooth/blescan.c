@@ -31,6 +31,9 @@ char * mac_str[NUM_OF_MAC] =
         {
             SL_TB_0,
             SL_TB_1,
+            SL_TB_2,
+            SL_TB_3,
+            SL_TB_4
         };
 
 /*Functions*/
@@ -44,8 +47,9 @@ void ble_handler(void)
     for(i = 0; i < NUM_OF_MAC; i++)
     {
         ble_connect_device(mac_str[i]);
-        sleep(2);
+        sleep(5);
     }
+    sleep(60);
 }
 
 void ble_connect_device(char * address) {
@@ -55,28 +59,19 @@ void ble_connect_device(char * address) {
     printf("----------START %s ----------\n", address);
     gatt_connection = gattlib_connect(NULL, address, GATTLIB_CONNECTION_OPTIONS_LEGACY_DEFAULT);
     if (NULL == gatt_connection) {
-        printf("Failed to connect to the bluetooth device.\n");
-        return;
-    } else {
-        printf("Successfully connected to the bluetooth device.\n");
+        gatt_connection = gattlib_connect(NULL, address, GATTLIB_CONNECTION_OPTIONS_LEGACY_DEFAULT);
+        if (NULL == gatt_connection)
+        {
+            printf("Failed to connect to the bluetooth device.\n");
+            return;
+        }
     }
+    printf("Successfully connected to the bluetooth device.\n");
 
     uint8_t *buffer = NULL;
     size_t len;
 
     for (i = 0; i < NUM_OF_UUIDS; i++) {
-        if(i == (NUM_OF_UUIDS - 2))
-        {
-            int debounce = 0;
-            do {
-                gattlib_read_char_by_uuid(gatt_connection, control.uuids[i], (void **) &buffer, &len);
-                decoder_ECO2(buffer, len);
-                if(control.ECO2 != 400)
-                {
-                    debounce+=1;
-                }
-            } while (debounce < 5);
-        }
         ret = gattlib_read_char_by_uuid(gatt_connection, control.uuids[i], (void **) &buffer, &len);
         if (ret != GATTLIB_SUCCESS) {
             gattlib_uuid_to_string(control.uuids[i], uuid_str, sizeof(uuid_str));
@@ -141,7 +136,9 @@ void ble_connect_device(char * address) {
             free(buffer);
         }
     }
-    gattlib_disconnect(gatt_connection);
+    if(GATTLIB_SUCCESS != gattlib_disconnect(gatt_connection)){
+        gattlib_disconnect(gatt_connection);
+    }
     datalogging(address);
 
 }
