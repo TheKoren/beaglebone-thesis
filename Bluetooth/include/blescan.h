@@ -15,7 +15,7 @@
 #include <time.h>
 
 #define NUM_OF_UUIDS 7u
-#define NUM_OF_MAC 2u
+#define NUM_OF_MAC 5u
 
 /*UUID Descriptors*/
 #define TVOC_UUID "efd658ae-c402-ef33-76e7-91b00019103b"
@@ -48,6 +48,9 @@
 
 #define SL_TB_0 "14:B4:57:6D:A5:6D"
 #define SL_TB_1 "00:0B:57:64:8F:DD"
+#define SL_TB_2 "58:8E:81:72:F6:52"
+#define SL_TB_3 "58:8E:81:72:F6:11"
+#define SL_TB_4 "08:6B:D7:FE:13:F7"
 
 /*RGB CODES*/
 
