@@ -1,3 +1,4 @@
+# Not used for the project, just for sample
 set datafile separator ","
 set term png size 800,600
 set output "output.png"
