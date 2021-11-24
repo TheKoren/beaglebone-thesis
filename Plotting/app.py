@@ -44,9 +44,9 @@ for mac in macs:
         else:
             gp.c("set autoscale y2")
         if (plot[0] == "Sound"):
-            gp.c("plot \"< tail -n 202 'temp.txt'\" using 2:" + plot[3] + " axes x1y1 t \"" + plot[1] + "\" w lines lt rgb \"red\"")
+            gp.c("plot \"< tail -n 225 'temp.txt'\" using 2:" + plot[3] + " axes x1y1 t \"" + plot[1] + "\" w lines lt rgb \"red\"")
             gp.c("set y2label \" \"")
         else:
             gp.c("set y2tics")
             gp.c("set y2label \"" + plot[2] + "\"")
-            gp.c("plot \"< tail -n 202 'temp.txt'\" using 2:" + plot[3] + " axes x1y1 t \"" + plot[1] + "\" w lines lt rgb \"red\", \"< tail -n 144 'temp.txt'\" using 2:" + plot[4] + " axes x1y2 t \"" + plot[2] + "\" with lines")
+            gp.c("plot \"< tail -n 225 'temp.txt'\" using 2:" + plot[3] + " axes x1y1 t \"" + plot[1] + "\" w lines lt rgb \"red\", \"< tail -n 144 'temp.txt'\" using 2:" + plot[4] + " axes x1y2 t \"" + plot[2] + "\" with lines")
