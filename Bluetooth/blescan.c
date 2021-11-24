@@ -47,22 +47,28 @@ void ble_handler(void)
     for(i = 0; i < NUM_OF_MAC; i++)
     {
         ble_connect_device(mac_str[i]);
-        sleep(5);
     }
-    sleep(60);
 }
 
 void ble_connect_device(char * address) {
     gatt_connection_t *gatt_connection;
     int ret, i;
+    int debounce = 1;
     char uuid_str[MAX_LEN_UUID_STR + 1];
-    printf("----------START %s ----------\n", address);
+    printf("---------- START %s ----------\n", address);
     gatt_connection = gattlib_connect(NULL, address, GATTLIB_CONNECTION_OPTIONS_LEGACY_DEFAULT);
-    if (NULL == gatt_connection) {
-        gatt_connection = gattlib_connect(NULL, address, GATTLIB_CONNECTION_OPTIONS_LEGACY_DEFAULT);
+    if (NULL == gatt_connection)
+    {
+        do{
+            printf("Attempting connection %d times", debounce);
+            gatt_connection = gattlib_connect(NULL, address, GATTLIB_CONNECTION_OPTIONS_LEGACY_DEFAULT);
+            debounce++;
+        }while((debounce < 3) && (NULL == gatt_connection));
+
         if (NULL == gatt_connection)
         {
             printf("Failed to connect to the bluetooth device.\n");
+            badConnectionDataLogging(address);
             return;
         }
     }

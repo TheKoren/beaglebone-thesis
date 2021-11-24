@@ -12,17 +12,31 @@ void controlprint()
 
 void datalogging(const char * address)
 {
-    writeDataToFile(address);
+    writeDataToFile(address, true);
     controlprint();
     printf("Successfully disconnected from the bluetooth device.\n");
 }
 
-void writeDataToFile(const char * address)
+void badConnectionDataLogging(const char * address)
+{
+    writeDataToFile(address, false);
+    printf("TVOC: NaN ppd\neCO2: NaN ppm\nUV Index: NaN\nAmb light: NaN Lux\nTemp: NaN °C\nHumidity: NaN %%RH\nSound Level: NaN dBA\n");
+    printf("Bad data handled successfully\n");
+}
+
+void writeDataToFile(const char * address, bool isDataValid)
 {
     FILE * fd = fopen("data.txt","ab");
     if(fd == NULL)
     {
         return;
     }
-    fprintf(fd,"%s,%u,%d,%li,%.0f,%.2f,%.2f,%.2f,%.2f\n",address,(unsigned)time(NULL),control.TVOC, control.ECO2, control.UV, control.AMB, control.TEMP, control.HUM, control.SOUND);
+    if(isDataValid == true)
+    {
+        fprintf(fd,"%s,%u,%d,%li,%.0f,%.2f,%.2f,%.2f,%.2f\n",address,(unsigned)time(NULL),control.TVOC, control.ECO2, control.UV, control.AMB, control.TEMP, control.HUM, control.SOUND);
+    }
+    else
+    {
+        fprintf(fd,"%s,%u,NaN,NaN,NaN,NaN,NaN,NaN,NaN\n",address,(unsigned)time(NULL));
+    }
 }
