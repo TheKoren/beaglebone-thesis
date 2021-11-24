@@ -60,7 +60,7 @@ void ble_connect_device(char * address) {
     if (NULL == gatt_connection)
     {
         do{
-            printf("Attempting connection %d times\n", debounce);
+            printf("Attempting connection %d times.\n", debounce);
             gatt_connection = gattlib_connect(NULL, address, GATTLIB_CONNECTION_OPTIONS_LEGACY_DEFAULT);
             debounce++;
         }while((debounce < 3) && (NULL == gatt_connection));
