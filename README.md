@@ -17,5 +17,10 @@ The air quality can be monitored via a WEB page, in accordance with the IoT appr
 My thesis would present a lower-budget solution to replace more expensive air quality measurement devices, and would provide technical support for the development of other Bluetooth systems based on Beaglebone cards.
 </div>
 
+## Architecture
+<div align ="middle">
+ 
+![image](https://user-images.githubusercontent.com/44529612/144943456-0e48d183-a87e-4dbd-90b7-4efd37bf0d7a.png)
 
+</div>
 
