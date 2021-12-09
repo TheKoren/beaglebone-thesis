@@ -14,10 +14,6 @@ static uuid_t g_uuid;
 
 char * uuids_str[NUM_OF_UUIDS] =
         {
-            //BATTLVL_UUID,
-            //HALLFIELDSTATE_UUID,
-            //HALLFIELDSTRENGTH_UUID,
-            //PRESSURE_UUID,
             HUM_UUID,
             SOUNDLVL_UUID,
             UVINDEX_UUID,
@@ -82,6 +78,9 @@ void ble_connect_device(char * address) {
         if (ret != GATTLIB_SUCCESS) {
             gattlib_uuid_to_string(control.uuids[i], uuid_str, sizeof(uuid_str));
             printf("Could not read data from: %s.\n", uuid_str);
+            badConnectionDataLogging();
+            gattlib_disconnect(gatt_connection);
+            return;
         } else {
             switch (i) {
                 case 0:
@@ -102,11 +101,11 @@ void ble_connect_device(char * address) {
                 case 5:
                     decoder_ECO2(buffer, len);
                     char * str;
-                    if(control.ECO2 < 600)
+                    if(control.ECO2 < 1000)
                     {
                         str = GREEN;
                     }
-                    else if((600 <= control.ECO2) && (control.ECO2 < 2000))
+                    else if((1000 <= control.ECO2) && (control.ECO2 < 2000))
                     {
                         str = YELLOW;
                     }

@@ -40,3 +40,17 @@ void writeDataToFile(const char * address, bool isDataValid)
         fprintf(fd,"%s,%u,NaN,NaN,NaN,NaN,NaN,NaN,NaN\n",address,(unsigned)time(NULL));
     }
 }
+
+void deleteData(void)
+{
+    FILE * fd = fopen("data.txt", "w");
+    if(fd == NULL)
+    {
+        return;
+    }
+    else
+    {
+        printf("Successfully deleted the contents of data.txt file");
+    }
+    return;
+}

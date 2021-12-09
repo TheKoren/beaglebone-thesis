@@ -1,7 +1,6 @@
 #include "cli.h"
 
 int main(int argc, char** argv) {
-    //commandInterpreter(argc, argv);
-    cli_caseMeasure();
+    commandInterpreter(argc, argv);
     return 0;
 }

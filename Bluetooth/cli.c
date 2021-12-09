@@ -42,12 +42,11 @@ void cli_caseHelp(void)
 }
 void cli_caseMeasure(void)
 {
-    // Call gatttool functionalites
     ble_handler();
     exit(EXIT_SUCCESS);
 }
 void cli_caseDeleteData(void)
 {
-    // data.h, data.c, control
+    deleteData();
     exit(EXIT_SUCCESS);
 }
