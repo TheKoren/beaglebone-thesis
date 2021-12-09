@@ -11,6 +11,8 @@
 #include <unistd.h>
 #include <string.h>
 
+#define PROGRAM_FAILURE -1
+
 int commandInterpreter(int argc, char *const *argv);
 
 /*CLI FUNCTION CASE DECLARATIONS*/

@@ -6,7 +6,7 @@
 
 void controlprint()
 {
-    printf("TVOC: %d ppd\neCO2: %li ppm\nUV Index: %.0f\nAmb light: %.2f Lux\nTemp: %.2f °C\nHumidity: %.2f %%RH\nSound Level: %.2f dBA\n", control.TVOC,
+    printf("TVOC: %d ppb\neCO2: %li ppm\nUV Index: %.0f\nAmb light: %.2f Lux\nTemp: %.2f °C\nHumidity: %.2f %%RH\nSound Level: %.2f dBA\n", control.TVOC,
            control.ECO2, control.UV, control.AMB, control.TEMP, control. HUM, control.SOUND);
 }
 
@@ -20,7 +20,7 @@ void datalogging(const char * address)
 void badConnectionDataLogging(const char * address)
 {
     writeDataToFile(address, false);
-    printf("TVOC: NaN ppd\neCO2: NaN ppm\nUV Index: NaN\nAmb light: NaN Lux\nTemp: NaN °C\nHumidity: NaN %%RH\nSound Level: NaN dBA\n");
+    printf("TVOC: NaN ppb\neCO2: NaN ppm\nUV Index: NaN\nAmb light: NaN Lux\nTemp: NaN °C\nHumidity: NaN %%RH\nSound Level: NaN dBA\n");
     printf("Bad data handled successfully\n");
 }
 
@@ -50,7 +50,7 @@ void deleteData(void)
     }
     else
     {
-        printf("Successfully deleted the contents of data.txt file");
+        printf("Successfully deleted the contents of data.txt file\n");
     }
     return;
 }
