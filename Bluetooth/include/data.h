@@ -11,6 +11,7 @@ void datalogging(const char * address);
 void writeDataToFile(const char * address, bool isDataValid);
 void controlprint(void);
 void badConnectionDataLogging(const char * address);
+void deleteData(void);
 
 
 #endif //BEAGLEBONE_DATA_H
