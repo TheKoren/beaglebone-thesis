@@ -13,7 +13,6 @@ set xlabel "Time (UTC)"
 set y2tics
 set grid
 set key right
-# set xtics 200
 set label "Copyright: Koren 2021" at screen 0.99, screen 0.02 right textcolor rgb "#888888"
 set ylabel "Temperature (°C)"
 set y2label "Relative Humidity (%)"
